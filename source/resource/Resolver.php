@@ -44,7 +44,7 @@ class ResolverResource extends GenericResource {
       $data = Ensure::Input($data);
       $is_str = $data->is_string();
 
-      if (!isset($data))
+      if (!isset($data) || empty($data->data))
         return $object;
       /**
        * certain objects cannot
